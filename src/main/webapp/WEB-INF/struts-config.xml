@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="net.bolero.epo.strutsspring.LoginForm"></form-bean>
+	</form-beans>
+
+	<action-mappings>
+	
+		<action
+			path="/Welcome"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/Welcome.jsp"/>
+			
+			<action path="/login"
+            type="net.bolero.epo.strutsspring.LoginAction"
+			    name="loginForm"
+			   scope="request"
+		        validate="false">
+		     <forward name="credentialsEntered" path="/loginSelectRole.do" redirect="true"/>
+		     <forward name="input" path="/login.jsp"/>
+		    </action>
+		    
+		    <action path="/loginSelectRole"
+            type="net.bolero.epo.strutsspring.LoginSelectRole">
+		     	<forward name="input" path="/loginSelectRole.jsp"/>
+		     	<forward name="error" path="/error.jsp"/>
+		    </action>
+		    
+		    <action path="/postSelectRole">
+		    	<forward name="error" path="/error.jsp"/>
+		    </action>
+		
+	</action-mappings>
+
+</struts-config>
