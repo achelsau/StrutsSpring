@@ -37,5 +37,6 @@ public class LoginAction extends Action {
 	private void getSpringBeans(HttpServletRequest request) {
 		WebApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext());
         UserBO mgr = (UserBO) ctx.getBean("userBO");
+        System.out.println(mgr.getTest());
 	}
 }

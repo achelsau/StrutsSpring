@@ -20,7 +20,7 @@
 			    name="loginForm"
 			   scope="request"
 		        validate="false">
-		     <forward name="credentialsEntered" path="/loginSelectRole.do" redirect="true"/>
+		     <forward name="credentialsEntered" path="springmvc/loginSelectRole" redirect="true"/>
 		     <forward name="input" path="/login.jsp"/>
 		    </action>
 		    
