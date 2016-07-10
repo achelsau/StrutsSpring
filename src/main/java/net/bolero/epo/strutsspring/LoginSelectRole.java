@@ -19,7 +19,8 @@ public class LoginSelectRole extends Action {
 			HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		LoginForm loginForm = (LoginForm) session.getAttribute("loginForm");
-		if (loginForm.getUsername() != null && loginForm.getUsername().equals("ariel") && loginForm.getPassword() != null && loginForm.getPassword().equals("chelsau")) {
+		if (loginForm.getUsername() != null && loginForm.getUsername().equals("test")
+				&& loginForm.getPassword() != null && loginForm.getPassword().equals("test")) {
 			return mapping.findForward("input");
 		}
 		return mapping.findForward("error");

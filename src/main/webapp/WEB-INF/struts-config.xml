@@ -36,4 +36,6 @@
 		
 	</action-mappings>
 
+<!-- 	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn" /> -->
+
 </struts-config>
