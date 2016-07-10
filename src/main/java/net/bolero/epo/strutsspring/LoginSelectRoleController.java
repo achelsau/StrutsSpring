@@ -18,9 +18,15 @@ public class LoginSelectRoleController {
 		HttpSession session = request.getSession();
 		LoginForm loginForm = (LoginForm) session.getAttribute("loginForm");
 		
-		System.out.println("Is Login Form? " + (loginForm == null));
+		System.out.println("Is Login Form? " + !(loginForm == null));
+		if (loginForm != null) {
+			System.out.println(loginForm.getUsername() + ", " + loginForm.getPassword());
+		}
 		
-		return null;
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("loginSelectRole");
+		
+		return modelAndView;
 		
 	}
 }

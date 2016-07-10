@@ -11,5 +11,4 @@
 
 	<context:component-scan base-package="net.bolero.epo.strutsspring" />
 
-	
 </beans>
