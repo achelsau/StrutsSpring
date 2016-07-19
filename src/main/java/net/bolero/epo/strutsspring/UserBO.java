@@ -4,8 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserBO {
-	private String test = "test";
-	public String getTest() {
-		return test;
+	private String name = "userBOManagedBean";
+	public String getName() {
+		return name;
 	}
 }

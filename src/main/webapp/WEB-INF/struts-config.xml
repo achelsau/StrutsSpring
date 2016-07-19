@@ -22,7 +22,7 @@
 		    </action>
 		    
 		    <action path="/loginSelectRole"
-            type="net.bolero.epo.strutsspring.LoginSelectRole">
+            type="net.bolero.epo.strutsspring.LoginSelectRoleAction">
 		     	<forward name="input" path="/loginSelectRole.jsp"/>
 		     	<forward name="error" path="/error.jsp"/>
 		    </action>

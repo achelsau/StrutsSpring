@@ -13,20 +13,18 @@ public class LoginSelectRoleController {
 	
 	@RequestMapping("/loginSelectRole")
 	public ModelAndView getRoles(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("Get Roles");
+		System.out.println("-----Spring Controller-----");
 		
 		HttpSession session = request.getSession();
 		LoginForm loginForm = (LoginForm) session.getAttribute("loginForm");
 		
-		System.out.println("Is Login Form? " + !(loginForm == null));
+		System.out.println("Is Login Form Present on Session? " + !(loginForm == null));
 		if (loginForm != null) {
-			System.out.println(loginForm.getUsername() + ", " + loginForm.getPassword());
+			System.out.println("Username, Password from session: " + loginForm.getUsername() + ", " + loginForm.getPassword());
 		}
 		
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("loginSelectRole");
-		
-		return modelAndView;
+		// nothing will be shown for the moment
+		return null;
 		
 	}
 }

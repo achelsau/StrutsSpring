@@ -11,8 +11,10 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.springframework.stereotype.Component;
 
-public class LoginSelectRole extends Action {
+@Component
+public class LoginSelectRoleAction extends Action {
 	public ActionForward execute(ActionMapping mapping,
 			ActionForm form,
 			HttpServletRequest request,
